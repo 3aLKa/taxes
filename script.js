@@ -49,7 +49,7 @@ function taxesCalculator() {
 
 function results() {
     preTaxSalaryText.innerHTML = preTaxSalary.toFixed(0);
-    taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1);
+    taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1) + '%';
 }
 
 secondBlockHiding();
