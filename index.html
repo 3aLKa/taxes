@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Taxes</title>
+</head>
+<body>
+
+    <div class="page">
+        <aside class="disclaimerAside">Учитываются только налоги, прямо связанные с заработной платой</aside>
+        <section id="firstBlock" class="block">
+            <div class="headerH"><h1 class="mainH">Какая у вас заработная плата до вычета налогов?</h1></div>
+            <div class="beforeInputText">Введите свою заработную плату, получаемую на руки:</div>
+            <input type="text" class="input" id="input">
+            <button id="button" class="button">Узнать!</button>
+        </section>
+        
+        <section id="secondBlock" class="block">
+            <h1 class="h1Second">Ваша заработная плата до вычета налогов: </h1>
+            <div class="preTaxSalary"><span id="preTaxSalaryText"></span>₽</div>
+            <div class="taxes">Сумма налогов составляется: <p id="taxesText"></p></div>
+            <div class="disclaimer">*Возможны небольшие неточности, связанные с опасностью труда, если ваш труд не попадает под 1 класс профессионального риска, то страховой взнос от несчастных случаев может доходить до 8,5% (вместо 0,2%)</div>
+        </section>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

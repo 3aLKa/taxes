@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.page {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.disclaimerAside {
+    width: 45%;
+    background-color: white;
+    margin-bottom: 50px;
+    border-radius: 9px;
+    padding: 15px;
+    color: rgb(228, 35, 35);
+    text-align: center;
+}
+
+.block {
+    width: 45%;
+    height: 38%;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border: 4px rgb(255, 36, 36) solid;
+}
+#firstBlock {
+    border: none;
+}
+#secondBlock {
+    text-align: center;
+}
+
+.h1Second {
+    margin-top: 10px;
+    font-size: 36px;
+}
+.beforeInputText {
+    font-size: 24px;
+}
+.preTaxSalary {
+    color: rgb(228, 35, 35);
+    font-size: 62px;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 1px solid rgba(228, 35, 35, 0.432);
+    padding-bottom: 10px;
+}
+#preTaxSalaryText {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;   
+}
+.taxes {
+    font-size: 26px;
+    margin: 12px auto auto;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.76);
+    margin: auto 17px 15px;
+}
+
+.headerH {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(255, 255, 85);
+    display: flex;
+    justify-content: center;
+}
+
+.mainH {
+    margin: auto 15px;
+    font-size: 28px;
+    text-align: center;
+}
+
+#taxesText {
+    font-size: 30px;
+}
+
+.beforeInputText {
+    text-align: center;
+    margin: auto auto 10px;
+}
+.input {
+    margin: 0 auto 12px;
+    border: none;
+    background-color: rgba(148, 255, 255, 0.74);
+    height: 35px;
+    width: 320px;
+    border-radius: 9px;
+    padding: 9px;
+}
+
+.button {
+    width: 120px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(148, 255, 255, 0.74);
+    margin: 0 auto auto;
+}
+
+@media (max-width : 1800px) {
+    .block {
+        height: 50%;
+    }
+    .headerH {
+        height: 110px;
+    }
+    .button {
+        height: 48px;
+    }
+    .input {
+        height: 42px;
+        font-size: 26px;
+    }
+    .beforeInputText {
+        font-size: 22px;
+    }
+
+    .h1Second {
+        margin-top: auto;
+    }
+    .preTaxSalary {
+        padding-bottom: 40px;
+    }
+    .taxes {
+        margin-top: 28px;
+    }
+}
+
+
+@media (max-width : 1380px) {
+
+    .mainH {
+        margin: auto 25px;
+    }
+    .beforeInputText {
+        margin: auto 15px 20px;
+    }
+
+    .h1Second {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .taxes {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width : 1080px) {
+    .block {
+        height: 60%;
+    }
+    .headerH {
+        height: 160px;
+    }
+    .disclaimerAside {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width : 833px) {
+    .disclaimerAside {
+        width: 55%;
+    }
+    .block {
+        height: 65%;
+        width: 55%;
+    }
+    .headerH {
+        height: 160px;
+    }
+}
+
+@media (max-width : 680px) {
+    .disclaimerAside {
+        width: 65%;
+    }
+    .block {
+        height: 70%;
+        width: 65%;
+    }
+
+}
+
+@media (max-width : 560px) {
+    .block {
+        height: 70%;
+        width: 80%;
+    }
+    .disclaimerAside {
+        width: 80%;
+    }
+}
+
+@media (max-width : 460px) {
+    .block {
+        height: 75%;
+        width: 90%;
+    }
+    .disclaimerAside {
+        width: 90%;
+    }
+    .h1Second {
+        font-size: 28px;
+    }
+    .input {
+        width: 260px;
+        font-size: 22   px;
+    }
+}
+
+@media (max-width : 360px) {
+    .headerH {
+        height: 240px;
+    }
+}
+
