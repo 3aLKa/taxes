@@ -5,6 +5,7 @@ let secondBlock = document.getElementById('secondBlock');
 let preTaxSalaryText = document.getElementById('preTaxSalaryText');
 let taxesText = document.getElementById('taxesText');
 
+let taxesPercent;
 let salary;
 let taxes;
 let ndfl;
@@ -42,12 +43,13 @@ function taxesCalculator() {
     }
     SoNS = salary * 0.002
     taxes = ndfl + OMS + VNiM + OPS + SoNS;
+    taxesPercent = taxes/salary*100;
     preTaxSalary = Number(salary) + Number(taxes);
 }
 
 function results() {
     preTaxSalaryText.innerHTML = preTaxSalary.toFixed(0);
-    taxesText.innerHTML = taxes.toFixed(0) + '₽';
+    taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1);
 }
 
 secondBlockHiding();
