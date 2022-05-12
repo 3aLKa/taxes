@@ -296,8 +296,18 @@ function results() {
 }
 
 secondBlockHiding();
-
+buttonF.disabled = true;
 input.oninput = function() {
+    let check = /^\d+$/;
+    let value = input.value;
+    if (check.test(value) == true) {
+        console.log(value);
+        buttonF.disabled = false;
+    }
+    else {
+        buttonF.disabled = true;
+    }
+
     preSalary = input.value;
     if(preSalary* 12 * 1.15 > 5000000) {
         salary = preSalary * 1.15
@@ -325,4 +335,5 @@ buttonA.onclick = function() {
     buttonA.style.display = 'none';
     disclaimerAside.style.display = 'none';
     input.value = "";
+    buttonF.disabled = true;
 }
