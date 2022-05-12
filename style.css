@@ -5,6 +5,19 @@
     font-family: 'JetBrains Mono', monospace;
     font-weight: 400;
     box-sizing: border-box;
+    z-index: 15;
+}
+
+.background {
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
 }
 
 .page {
@@ -12,9 +25,6 @@
     max-height: 100%;
     height: 100vh;
     width: 100vw;
-    background-image: url(background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +42,7 @@
 
 .block {
     width: 45%;
-    height: 38%;
+    height: 38vh;
     background-color: white;
     border-radius: 30px;
     display: flex;
@@ -43,9 +53,11 @@
 
 #clarificationsBlock {
     border: 4px rgb(55, 191, 245) solid;
-    height: 53%;
+    height: 53vh;
 }
 #secondBlock {
+    height: 74vh;
+    width: 56%;
     text-align: center;
     border: 4px rgb(255, 36, 36) solid;
 }
@@ -156,13 +168,33 @@
 .option {
     font-size: inherit;
 }
+.afterTaxes {
+    font-size: 23px;
+}
+.taxesSection {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+}
 
 @media (max-width : 1800px) {
+    .page {
+        min-width: 100%;
+        min-height: 100vh;
+        width: 100vw;
+        height: auto;
+    }
     #clarificationsBlock {
-        height: 56%;
+        height: 62vh;
+        width: 62%;
     }
     .block {
-        height: 56%;
+        height: 56vh;
+    }
+
+    #secondBlock {
+        height: 760px;
+        margin-bottom: 50px;
     }
     .headerH {
         height: 110px;
@@ -177,20 +209,21 @@
     .beforeInputText {
         font-size: 22px;
     }
-
-
     .preTaxSalary {
         padding-bottom: 40px;
     }
     .taxes {
         margin-top: 28px;
     }
+    #disclaimerAside {
+        margin-top: 30px;
+    }
 }
 
 
 @media (max-width : 1380px) {
     #clarificationsBlock {
-        height: 66%;
+        height: 66vh;
         width: 56%;
     }
     .mainH {
@@ -214,11 +247,17 @@
 
 @media (max-width : 1080px) {
     #clarificationsBlock {
-        height: 67%;
+        height: 67vh;
         width: 66%;
     }
+    #secondBlock {
+        height: 760px;
+        position: relative;
+        top: 60px;
+    }
+
     .block {
-        height: 66%;
+        height: 66vh;
     }
     .headerH {
         height: 160px;
@@ -230,7 +269,7 @@
 
 @media (max-width : 833px) {
     #clarificationsBlock {
-        height: 72%;
+        height: 72vh;
         width: 70%;
     }
     .select {
@@ -240,12 +279,16 @@
         width: 55%;
     }
     .block {
-        height: 65%;
+        height: 65vh;
         width: 55%;
     }
     .headerH {
         height: 160px;
     }
+    #secondBlock {
+        height: 890px;
+        margin-bottom: 110px;
+    } 
     #buttonA {
         font-size: 16px;
         height: auto;
@@ -256,28 +299,35 @@
 
 @media (max-width : 680px) {
     #clarificationsBlock {
-        height: 82%;
+        height: 82vh;
         width: 84%;
     }
     #disclaimerAside {
         width: 65%;
     }
+
     .block {
-        height: 70%;
+        height: 70vh;
         width: 65%;
+    }
+    #secondBlock {
+        height: 870px;
+        width: 86vw;
+
     }
 
 }
 
 @media (max-width : 560px) {
     #clarificationsBlock {
-        height: 86%;
+        height: 86vh;
         width: 86%;
     }
     .block {
-        height: 70%;
+        height: 70vh;
         width: 80%;
     }
+
     #disclaimerAside {
         width: 80%;
     }
@@ -285,11 +335,11 @@
 
 @media (max-width : 460px) {
     #clarificationsBlock {
-        height: 76%;
+        height: 76vh;
         width: 94%;
     }
     .block {
-        height: 75%;
+        height: 75vh;
         width: 90%;
     }
     #disclaimerAside {
@@ -306,11 +356,17 @@
 
 @media (max-width : 360px) {
     #clarificationsBlock {
-        height: 94%;
+        height: 94vh;
         width: 96%;
+    }
+    #secondBlock {
+        width: 92vw;
     }
     .headerH {
         height: 240px;
+    }
+    #secondBlock {
+        height: 930px;
     }
 }
 

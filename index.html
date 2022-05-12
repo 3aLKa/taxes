@@ -14,7 +14,7 @@
     <title>Калькулятор зарплаты до вычета налогов</title>
 </head>
 <body>
-
+    <div class="background"></div>
     <div class="page">
         <button id="buttonA" class="button">Назад</button>
 
@@ -86,7 +86,15 @@
         <section id="secondBlock" class="block">
             <h1 class="h1">Ваша заработная плата до вычета налогов: </h1>
             <div class="preTaxSalary"><span id="preTaxSalaryText"></span>₽</div>
-            <div class="taxes">Сумма налогов составляется: <p id="taxesText"></p></div>
+            <div class="taxes">Сумма налогов составляетя: <p id="taxesText"></p></div>
+            <div class="afterTaxes">Из которых:</div>
+            <section class="taxesSection">
+                <div class="ndfl"> Налог на доходы физических лиц: <p id="ndflTxt"></p></div>
+                <div class="oms"> Обязательное медицинское страхование: <p id="omsTxt"></p></div>
+                <div class="ops"> Обязательное пенсионное страхование: <p id="opsTxt"></p></div>
+                <div class="sons"> Страхование от несчастных случаев: <p id="sonsTxt"></p></div>
+                <div class="vnim"> Взносы на случай временной нетрудоспособности и в связи с материнством: <p id="vnimTxt"></p></div>
+            </section>
         </section>
         
     </div>

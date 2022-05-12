@@ -6,6 +6,12 @@ let selectBS = document.getElementById('selectBS');
 let selectCPR = document.getElementById('selectCPR');
 let selectR = document.getElementById('selectR');
 
+let ndflTXT = document.getElementById('ndflTxt');
+let omsTXT = document.getElementById('omsTxt');
+let opsTXT = document.getElementById('opsTxt');
+let sonsTXT = document.getElementById('sonsTxt');
+let vnimTXT = document.getElementById('vnimTxt');
+
 let disclaimerAside = document.getElementById('disclaimerAside');
 let input = document.getElementById('input');
 let firstBlock = document.getElementById('firstBlock');
@@ -17,7 +23,7 @@ let taxesText = document.getElementById('taxesText');
 let width = document.documentElement.clientWidth;
 
 let taxesPercent;
-let salary;
+let preSalary;
 let taxes;
 let ndfl;
 let PFR;
@@ -26,6 +32,12 @@ let VNiM;
 let SoNS;
 let preTaxSalary;
 let CPR;
+
+let ndflPercent;
+let omsPercent ;
+let opsPercent;
+let sonsPercent;
+let vnimPercent;
 
 function secondBlockHiding() {
     secondBlock.style.display = 'none';
@@ -46,7 +58,7 @@ function goToLastBlock() {
     secondBlock.style.display = '';
     buttonA.style.display = '';
     disclaimerAside.style.display = '';
-    if (width < 460) {
+    if (width < 680) {
         disclaimerAside.style.display = 'none';
     }
 }
@@ -220,7 +232,6 @@ function VNiMCalc() {
 
     else if (BSValue == 'IT') {
         VNiMRate = 0.015;
-        OPS = salary * VNiMRate;
     }
     VNiM = salary * VNiMRate;
 }
@@ -260,22 +271,41 @@ function taxesCalculator() {
     OMSCalc();
     SoNSCalc();
     console.log(ndfl + '=' + OMS + '=' + VNiM + '=' + OPS + '=' + SoNS)
+
     // Расчет полных сумм налогов
     taxes = ndfl + OMS + VNiM + OPS + SoNS; // Сумма налогов
-    taxesPercent = taxes/salary*100; // Процент налога
     preTaxSalary = Number(salary) + Number(taxes); // Заработная плата до вычета налогов
+    taxesPercent = taxes/preTaxSalary*100; // Процент налога
+
+    ndflPercent = ndfl/preTaxSalary*100;
+    omsPercent = OMS/preTaxSalary*100;
+    opsPercent = OPS/preTaxSalary*100;
+    sonsPercent = SoNS/preTaxSalary*100;
+    vnimPercent = VNiM/preTaxSalary*100;
 }
 
 function results() {
     preTaxSalaryText.innerHTML = preTaxSalary.toFixed(0);
     taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1)  + '%';
-    taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1) + '%';
+
+    ndflTXT.innerHTML = ndfl.toFixed(0) + '₽'  + ' ≈ ' + ndflPercent.toFixed(1) + '%';
+    omsTXT.innerHTML = OMS.toFixed(0) + '₽'  + ' ≈ ' + omsPercent.toFixed(1) + '%';
+    opsTXT.innerHTML = OPS.toFixed(0) + '₽'  + ' ≈ ' + opsPercent.toFixed(1) + '%';
+    sonsTXT.innerHTML = SoNS.toFixed(0) + '₽'  + ' ≈ ' + sonsPercent.toFixed(1) + '%';
+    vnimTXT.innerHTML = VNiM.toFixed(0) + '₽'  + ' ≈ ' + vnimPercent.toFixed(1) + '%';
 }
 
 secondBlockHiding();
 
 input.oninput = function() {
-    salary = input.value;
+    preSalary = input.value;
+    if(preSalary* 12 * 1.15 > 5000000) {
+        salary = preSalary * 1.15
+    }
+
+    else {
+        salary = preSalary * 1.13
+    }
 }
 
 buttonF.onclick = function() {
