@@ -16,19 +16,76 @@
 <body>
 
     <div class="page">
-        <aside class="disclaimerAside">Учитываются только налоги, прямо связанные с заработной платой</aside>
+            <button id="buttonA" onClick="window.location.reload();" class="button">Назад</button>
+
+        <aside id="disclaimerAside">Учитываются только налоги, прямо связанные с заработной платой</aside>
         <section id="firstBlock" class="block">
             <div class="headerH"><h1 class="mainH">Какая у вас заработная плата до вычета налогов?</h1></div>
             <div class="beforeInputText">Введите свою заработную плату, получаемую на руки:</div>
-            <input type="text" class="input" id="input">
-            <button id="button" class="button">Узнать!</button>
+            <input type="text" class="input" placeholder="В рублях" id="input">
+            <button id="buttonF" class="button">Далее</button>
         </section>
         
+        <section id="clarificationsBlock" class="block">
+            <h1 class="h1">Чтобы расчет был максимально точным, выберите: </h1>
+            <div class="selectBlock">
+                <h3 class="selectH">В какой компании вы работаете?</h3>
+                <select name="businessSize" id="selectBS" class="select">
+                    <option class="option" id="optionBS" value="BB">Стандартное предприятие</option>
+                    <option class="option" id="optionBS" value="MSB">Предприятие малого или среднего бизнеса</option>
+                    <option class="option" id="optionBS" value="IT">IT-компания</option>
+                </select>
+    
+                <h3 class="selectH">Какой ваш класс профессионального риска?</h3>
+                <select name="classPR" id="selectCPR" class="select">
+                    <option class="option" id="optionCPR" value="1">1 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="2">2 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="3">3 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="4">4 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="5">5 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="6">6 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="7">7 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="8">8 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="9">9 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="10">10 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="11">11 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="12">12 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="13">13 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="14">14 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="15">15 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="16">16 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="17">17 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="18">18 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="19">19 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="20">20 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="21">21 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="22">22 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="23">23 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="24">24 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="25">25 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="26">26 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="27">27 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="28">28 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="29">29 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="30">30 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="31">31 класс профессионального риска</option>
+                    <option class="option" id="optionCPR" value="32">32 класс профессионального риска</option>              
+                </select>
+    
+                <h3 class="selectH">Какой страны вы резидент?</h3>
+                <select name="residency" id="selectR" class="select">
+                    <option class="option" id="optionR" value="yes">Я резидент РФ</option>
+                    <option class="option" id="optionR" value="no">Я не резидент РФ</option>
+                </select>
+            </div>
+
+            <button id="buttonS" class="button">Узнать!</button>
+        </section>
+
         <section id="secondBlock" class="block">
-            <h1 class="h1Second">Ваша заработная плата до вычета налогов: </h1>
+            <h1 class="h1">Ваша заработная плата до вычета налогов: </h1>
             <div class="preTaxSalary"><span id="preTaxSalaryText"></span>₽</div>
             <div class="taxes">Сумма налогов составляется: <p id="taxesText"></p></div>
-            <div class="disclaimer">*Возможны небольшие неточности, связанные с опасностью труда, если ваш труд не попадает под 1 класс профессионального риска, то страховой взнос от несчастных случаев может доходить до 8,5% (вместо 0,2%)</div>
         </section>
         
     </div>
