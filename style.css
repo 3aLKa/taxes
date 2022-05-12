@@ -43,7 +43,7 @@
 
 #clarificationsBlock {
     border: 4px rgb(55, 191, 245) solid;
-    height: 48%;
+    height: 53%;
 }
 #secondBlock {
     text-align: center;
@@ -140,7 +140,10 @@
     letter-spacing: -.3pt;
     word-spacing: -2pt;
 }
-
+.selectDis {
+    text-align: center;
+    margin: 0 24px 7px;
+}
 .select {
     width: 48%;
     margin: auto;
@@ -211,8 +214,8 @@
 
 @media (max-width : 1080px) {
     #clarificationsBlock {
-        height: 62%;
-        width: 63%;
+        height: 67%;
+        width: 66%;
     }
     .block {
         height: 66%;
@@ -253,8 +256,8 @@
 
 @media (max-width : 680px) {
     #clarificationsBlock {
-        height: 76%;
-        width: 80%;
+        height: 82%;
+        width: 84%;
     }
     #disclaimerAside {
         width: 65%;
@@ -268,7 +271,7 @@
 
 @media (max-width : 560px) {
     #clarificationsBlock {
-        height: 78%;
+        height: 86%;
         width: 86%;
     }
     .block {
