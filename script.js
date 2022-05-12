@@ -287,3 +287,12 @@ buttonS.onclick = function() {
     goToLastBlock();
     results();
 }
+
+buttonA.onclick = function() {
+    firstBlock.style.display = '';
+    clarificationBlock.style.display = 'none';
+    secondBlock.style.display = 'none';
+    buttonA.style.display = 'none';
+    disclaimerAside.style.display = 'none';
+    input.value = "";
+}
