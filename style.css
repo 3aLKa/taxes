@@ -30,6 +30,7 @@
     justify-content: center;
     flex-direction: column;
 }
+
 #disclaimerAside {
     width: 45%;
     background-color: white;
@@ -42,7 +43,7 @@
 
 .block {
     width: 45%;
-    height: 38vh;
+    height: 34vh;
     background-color: white;
     border-radius: 30px;
     display: flex;
@@ -55,8 +56,9 @@
     border: 4px rgb(55, 191, 245) solid;
     height: 53vh;
 }
+
 #secondBlock {
-    height: 74vh;
+    height: 760px;
     width: 56%;
     text-align: center;
     border: 4px rgb(255, 36, 36) solid;
@@ -168,18 +170,21 @@
 .option {
     font-size: inherit;
 }
+
 .afterTaxes {
     font-size: 23px;
 }
+
 .taxesSection {
     width: 90%;
     text-align: left;
-    margin: auto;
+    margin: 40px auto auto;
 }
 
 .taxesTxt {
-    margin-bottom 12px;
+    margin-bottom: 4px;
 }
+
 @media (max-width : 1800px) {
     .page {
         min-width: 100%;
@@ -196,7 +201,6 @@
     }
 
     #secondBlock {
-        height: 760px;
         margin-bottom: 50px;
     }
     .headerH {
@@ -226,7 +230,7 @@
 
 @media (max-width : 1380px) {
     #clarificationsBlock {
-        height: 66vh;
+        height: 650px;
         width: 56%;
     }
     .mainH {
@@ -250,11 +254,11 @@
 
 @media (max-width : 1080px) {
     #clarificationsBlock {
-        height: 67vh;
+        height: 590px;
         width: 66%;
     }
     #secondBlock {
-        height: 760px;
+        height: 830px;
         position: relative;
         top: 60px;
     }
@@ -272,7 +276,7 @@
 
 @media (max-width : 833px) {
     #clarificationsBlock {
-        height: 72vh;
+        height: 640px;
         width: 70%;
     }
     .select {
@@ -289,7 +293,7 @@
         height: 160px;
     }
     #secondBlock {
-        height: 890px;
+        height: 940px;
         margin-bottom: 110px;
     } 
     #buttonA {
@@ -323,14 +327,16 @@
 
 @media (max-width : 560px) {
     #clarificationsBlock {
-        height: 86vh;
+        height: 650px;
         width: 86%;
     }
     .block {
         height: 70vh;
         width: 80%;
     }
-
+    #secondBlock {
+        height: 930px;
+    }
     #disclaimerAside {
         width: 80%;
     }
@@ -338,7 +344,7 @@
 
 @media (max-width : 460px) {
     #clarificationsBlock {
-        height: 76vh;
+        height: 660px;
         width: 94%;
     }
     .block {
@@ -362,17 +368,16 @@
 
 @media (max-width : 360px) {
     #clarificationsBlock {
-        height: 94vh;
+        height: 720px;
         width: 96%;
+        margin: 36px auto;
     }
     #secondBlock {
+        height: 970px;
         width: 92vw;
     }
     .headerH {
         height: 240px;
-    }
-    #secondBlock {
-        height: 930px;
     }
 }
 
