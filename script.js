@@ -288,11 +288,11 @@ function results() {
     preTaxSalaryText.innerHTML = preTaxSalary.toFixed(0);
     taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1)  + '%';
 
-    ndflTXT.innerHTML = ndfl.toFixed(0) + '₽'  + ' ≈ ' + ndflPercent.toFixed(1) + '%';
-    omsTXT.innerHTML = OMS.toFixed(0) + '₽'  + ' ≈ ' + omsPercent.toFixed(1) + '%';
-    opsTXT.innerHTML = OPS.toFixed(0) + '₽'  + ' ≈ ' + opsPercent.toFixed(1) + '%';
-    sonsTXT.innerHTML = SoNS.toFixed(0) + '₽'  + ' ≈ ' + sonsPercent.toFixed(1) + '%';
-    vnimTXT.innerHTML = VNiM.toFixed(0) + '₽'  + ' ≈ ' + vnimPercent.toFixed(1) + '%';
+    ndflTXT.innerHTML = ndfl.toFixed(0) + '₽'  + ' ≈ ' + ndflPercent.toFixed(2) + '%';
+    omsTXT.innerHTML = OMS.toFixed(0) + '₽'  + ' ≈ ' + omsPercent.toFixed(2) + '%';
+    opsTXT.innerHTML = OPS.toFixed(0) + '₽'  + ' ≈ ' + opsPercent.toFixed(2) + '%';
+    sonsTXT.innerHTML = SoNS.toFixed(0) + '₽'  + ' ≈ ' + sonsPercent.toFixed(2) + '%';
+    vnimTXT.innerHTML = VNiM.toFixed(0) + '₽'  + ' ≈ ' + vnimPercent.toFixed(2) + '%';
 }
 
 secondBlockHiding();
