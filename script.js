@@ -274,7 +274,7 @@ function taxesCalculator() {
 
     // Расчет полных сумм налогов
     taxes = ndfl + OMS + VNiM + OPS + SoNS; // Сумма налогов
-    preTaxSalary = Number(salary) + Number(taxes); // Заработная плата до вычета налогов
+    preTaxSalary = Number(preSalary) + Number(taxes); // Заработная плата до вычета налогов
     taxesPercent = taxes/preTaxSalary*100; // Процент налога
 
     ndflPercent = ndfl/preTaxSalary*100;
