@@ -178,7 +178,7 @@
 }
 
 .taxesTxt {
-    margin-bottom 12px;
+    margin-bottom: 8px;
 }
 @media (max-width : 1800px) {
     .page {
