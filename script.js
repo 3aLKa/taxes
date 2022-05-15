@@ -309,12 +309,12 @@ input.oninput = function() {
     }
 
     preSalary = input.value;
-    if(preSalary* 12 * 1.15 > 5000000) {
+    if(preSalary / 0.75 * 100 * 12 > 5000000) {
         salary = preSalary * 1.15
     }
 
     else {
-        salary = preSalary * 1.13
+        salary = preSalary / 0.77 * 100
     }
 }
 
