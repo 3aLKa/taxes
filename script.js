@@ -41,6 +41,11 @@ let opsPercent;
 let sonsPercent;
 let vnimPercent;
 
+
+function emptyInput() {
+    input.innerHTML = '';
+}
+
 function checkNumber(key) {
   return (key >= '0' && key <= '9') || key == 'ArrowLeft' || key == 'ArrowRight' || key == 'Delete' || key == 'Backspace';
 }
@@ -62,7 +67,7 @@ function secondBlockHiding() {
 function goToClarBlock() {
     firstBlock.style.display = 'none';
     clarificationBlock.style.display = '';
-    input.innerHTML = '';
+    emptyInput()
     place = 2;
 }
 
@@ -78,7 +83,7 @@ function goToLastBlock() {
     place = 3;
 }
 
-function goToLastBlock() {
+function goToFirstBlock() {
     firstBlock.style.display = '';
     clarificationBlock.style.display = 'none';
     secondBlock.style.display = 'none';
