@@ -13,7 +13,7 @@
 
     <title>Калькулятор зарплаты до вычета налогов</title>
 </head>
-<body>
+<body onkeydown="enterCatch(event.key)">
     <div class="background"></div>
     <div class="page">
         <button id="buttonA" class="button">Назад</button>
@@ -22,7 +22,7 @@
         <section id="firstBlock" class="block">
             <div class="headerH"><h1 class="mainH">Какая у вас заработная плата до вычета налогов?</h1></div>
             <div class="beforeInputText">Введите свою заработную плату, получаемую на руки:</div>
-            <input type="text" class="input" placeholder="В рублях" id="input">
+            <input inputmode="numeric" onkeydown="return checkNumber(event.key)" type="text" class="input" placeholder="В рублях" id="input">
             <button id="buttonF" class="button">Далее</button>
         </section>
         

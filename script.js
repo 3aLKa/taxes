@@ -2,6 +2,8 @@ let buttonF = document.getElementById('buttonF');
 let buttonS = document.getElementById('buttonS');
 let buttonA = document.getElementById('buttonA');
 
+let place = 1;
+
 let selectBS = document.getElementById('selectBS');
 let selectCPR = document.getElementById('selectCPR');
 let selectR = document.getElementById('selectR');
@@ -39,6 +41,17 @@ let opsPercent;
 let sonsPercent;
 let vnimPercent;
 
+function checkNumber(key) {
+  return (key >= '0' && key <= '9') || key == 'ArrowLeft' || key == 'ArrowRight' || key == 'Delete' || key == 'Backspace';
+}
+
+function enterCatch(key) {
+    if (place = 1 & input.value > 0)
+        if (key == 'Enter') {
+            goToClarBlock();
+        }
+}
+
 function secondBlockHiding() {
     secondBlock.style.display = 'none';
     clarificationBlock.style.display = 'none';
@@ -50,6 +63,7 @@ function goToClarBlock() {
     firstBlock.style.display = 'none';
     clarificationBlock.style.display = '';
     input.innerHTML = '';
+    place = 2;
 }
 
 function goToLastBlock() {
@@ -61,6 +75,18 @@ function goToLastBlock() {
     if (width < 680) {
         disclaimerAside.style.display = 'none';
     }
+    place = 3;
+}
+
+function goToLastBlock() {
+    firstBlock.style.display = '';
+    clarificationBlock.style.display = 'none';
+    secondBlock.style.display = 'none';
+    buttonA.style.display = 'none';
+    disclaimerAside.style.display = 'none';
+    input.value = "";
+    buttonF.disabled = true;
+    place = 1;
 }
 
 function checkCPR() {
@@ -329,11 +355,5 @@ buttonS.onclick = function() {
 }
 
 buttonA.onclick = function() {
-    firstBlock.style.display = '';
-    clarificationBlock.style.display = 'none';
-    secondBlock.style.display = 'none';
-    buttonA.style.display = 'none';
-    disclaimerAside.style.display = 'none';
-    input.value = "";
-    buttonF.disabled = true;
+    goToFirstBlock();
 }
