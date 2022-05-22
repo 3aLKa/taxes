@@ -41,6 +41,7 @@ let opsPercent;
 let sonsPercent;
 let vnimPercent;
 
+document.addEventListener("DOMContentLoaded", emptyInput);
 
 function emptyInput() {
     input.innerHTML = '';
