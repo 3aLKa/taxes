@@ -331,7 +331,6 @@ input.oninput = function() {
     let check = /^\d+$/;
     let value = input.value;
     if (check.test(value) == true) {
-        console.log(value);
         buttonF.disabled = false;
     }
     else {
@@ -339,12 +338,12 @@ input.oninput = function() {
     }
 
     preSalary = input.value;
-    if(preSalary + 650000 > 5000000) {
-        salary = preSalary + 650000 + (preSalary - 4350000) * 0.15
+    if(preSalary * 12 + 650000 > 5000000) {
+        salary = preSalary + 650000 / 12 + (preSalary - 4350000 / 12) * 0.15;
     }
 
     else {
-        salary = preSalary / 87 * 100
+        salary = preSalary / 87 * 100;
     }
 }
 
