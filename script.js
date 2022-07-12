@@ -341,12 +341,13 @@ input.oninput = function() {
     Number(preSalary);
     
     if(preSalary * 12 + 650000 > 5000000) {
-        salary = preSalary + 650000 / 12 + (preSalary - 4350000 / 12) * 0.15;
+        salary = (preSalary - 4350000 / 12) * 0.15 + preSalary + 650000 / 12;
     }
 
     else {
         salary = preSalary / 87 * 100;
     }
+    Number(salary);
 }
 
 buttonF.onclick = function() {
