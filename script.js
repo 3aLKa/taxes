@@ -338,6 +338,8 @@ input.oninput = function() {
     }
 
     preSalary = input.value;
+    Number(preSalary);
+    
     if(preSalary * 12 + 650000 > 5000000) {
         salary = preSalary + 650000 / 12 + (preSalary - 4350000 / 12) * 0.15;
     }
