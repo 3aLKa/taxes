@@ -206,7 +206,7 @@ function ndflCalc() {
             ndfl = salary * 0.13;
         }
         else {
-            ndfl = 650000 + (salary - 5000000) * 0.15
+            ndfl = 650000 + (salary - 5000000 / 12) * 0.15
         }
     }
 
@@ -338,11 +338,10 @@ input.oninput = function() {
     }
 
     preSalary = input.value;
-    Number(preSalary);
+    preSalary = Number(preSalary);
     
     if(preSalary * 12 + 650000 > 5000000) {
         salary = (preSalary - 4350000 / 12) * 0.15 + preSalary + 650000 / 12;
-        Number(salary);
         console.log(salary);
     }
 
