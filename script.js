@@ -206,7 +206,7 @@ function ndflCalc() {
             ndfl = salary * 0.13;
         }
         else {
-            ndfl = 650000 + (salary - 5000000 / 12) * 0.15
+            ndfl = 650000 / 12 + (salary - 5000000 / 12) * 0.15
         }
     }
 
@@ -318,11 +318,11 @@ function results() {
     preTaxSalaryText.innerHTML = preTaxSalary.toFixed(0);
     taxesText.innerHTML = taxes.toFixed(0) + '₽'  + ' ≈ ' + taxesPercent.toFixed(1)  + '%';
 
-    ndflTXT.innerHTML = ndfl.toFixed(0) + '₽'  + ' ≈ ' + ndflPercent.toFixed(2) + '%';
-    omsTXT.innerHTML = OMS.toFixed(0) + '₽'  + ' ≈ ' + omsPercent.toFixed(2) + '%';
-    opsTXT.innerHTML = OPS.toFixed(0) + '₽'  + ' ≈ ' + opsPercent.toFixed(2) + '%';
-    sonsTXT.innerHTML = SoNS.toFixed(0) + '₽'  + ' ≈ ' + sonsPercent.toFixed(2) + '%';
-    vnimTXT.innerHTML = VNiM.toFixed(0) + '₽'  + ' ≈ ' + vnimPercent.toFixed(2) + '%';
+    ndflTXT.innerHTML = ndfl.toFixed(0) + '₽'  + ' ≈ ' + ndflPercent.toFixed(2) + '% от затрат работодателя';
+    omsTXT.innerHTML = OMS.toFixed(0) + '₽'  + ' ≈ ' + omsPercent.toFixed(2) + '% от затрат работодателя';
+    opsTXT.innerHTML = OPS.toFixed(0) + '₽'  + ' ≈ ' + opsPercent.toFixed(2) + '% от затрат работодателя';
+    sonsTXT.innerHTML = SoNS.toFixed(0) + '₽'  + ' ≈ ' + sonsPercent.toFixed(2) + '% от затрат работодателя';
+    vnimTXT.innerHTML = VNiM.toFixed(0) + '₽'  + ' ≈ ' + vnimPercent.toFixed(2) + '% от затрат работодателя';
 }
 
 secondBlockHiding();
